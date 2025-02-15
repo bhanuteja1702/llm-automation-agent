@@ -3,7 +3,7 @@ import os
 BASE_DIR = os.path.abspath("/data")
 
 def _validate_path(file_path: str):
-    abs_path = _validate_path(file_path)
+    abs_path = os.path.abspath(file_path)
     if os.path.commonpath([BASE_DIR, abs_path]) != BASE_DIR:
         raise PermissionError(f"Access to files outside {BASE_DIR} is not allowed")
     return abs_path

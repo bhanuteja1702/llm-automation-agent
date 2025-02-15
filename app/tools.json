@@ -41,6 +41,33 @@
       {
         "type": "function",
         "function": {
+          "name": "count_day_occurences",
+          "description": "Count the number of days of a week given an input_file with a date per line.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "input_file": {
+                "type": "string",
+                "description": "The path to the input file containing dates."
+              },
+              "output_file": {
+                "type": "string",
+                "description": "The path to the output file where is count is written."
+              },
+              "day": {
+                "type": "number",
+                "description": "The day of the week to count. 0 is Sunday, 1 is Monday, ..., 6 is Saturday."
+              }
+            },
+            "required": ["input_file", "output_file", "day"],
+            "additionalProperties": false
+          }
+        },
+        "strict": true
+      },
+      {
+        "type": "function",
+        "function": {
           "name": "sort_contacts",
           "description": "Reads a list of contacts from input_file and sorts the contacts by last name and then firstname and saves it to a output_file.",
           "parameters": {
