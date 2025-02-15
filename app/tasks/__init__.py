@@ -7,3 +7,4 @@ from .generate_markdown_index import generate_markdown_index
 from .extract_sender_email import extract_sender_email
 from .extract_credit_card_number import extract_credit_card_number
 from .find_most_similar_comments import find_most_similar_comments
+from .query_db import query_db

@@ -206,6 +206,33 @@
           }
         },
         "strict": true
+      },
+      {
+        "type": "function",
+        "function": {
+          "name": "query_db",
+          "description": "Query the db with custom query and save the result to the output file.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "db_path": {
+                "type": "string",
+                "description": "The path to the database file."
+              },
+              "output_file": {
+                "type": "string",
+                "description": "The path to the output file where the query result will be saved."
+              },
+              "sql_query": {
+                "type": "string",
+                "description": "The query to execute on the database."
+              }
+            },
+            "required": ["db_path", "output_file", "sql_query"],
+            "additionalProperties": false
+          }
+        },
+        "strict": true
       }
     ]
   }
